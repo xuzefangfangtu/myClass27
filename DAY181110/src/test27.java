@@ -14,10 +14,10 @@ public class test27 {
 
         //用户所选红蓝球
         int[] userRedball = new int[6];
-        int userBlueball= 0;
+        int userBlueball = 0;
         //机器生成红篮球
         int[] sysRedball = new int[6];
-        int sysBlueball =0;
+        int sysBlueball;
 
 
         //选择机选还是自选
@@ -94,7 +94,6 @@ public class test27 {
             System.out.println("系统异常，2元不退");
         }
     }
-
 
     //redBalls 代表红球池子
     //comRedball 代表抽出的红球组合
