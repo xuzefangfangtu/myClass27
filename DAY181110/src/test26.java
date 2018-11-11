@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class test26 {
-    //新版冒泡法
+    //新版大大冒泡法
     public static void main(String[] args) {
         int[] arr = {44,78,34,56,12};
         int len = arr.length;

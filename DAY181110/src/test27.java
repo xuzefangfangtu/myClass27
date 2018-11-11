@@ -42,7 +42,8 @@ public class test27 {
                 userBlueball = input.nextInt();
                 break;
         }
-        Arrays.sort(userRedball);
+//        Arrays.sort(userRedball);
+        sortNumber(userRedball);
         System.out.println("您的本次号码是"+Arrays.toString(userRedball)+"+"+userBlueball);
 
         //系统生成中奖号码
@@ -50,7 +51,8 @@ public class test27 {
             computerSelection(redBalls,sysRedball);
         }
         sysBlueball = r.nextInt(16)+1;
-        Arrays.sort(sysRedball);
+//        Arrays.sort(sysRedball);
+        sortNumber(sysRedball);
         System.out.println("本次中奖号码是"+Arrays.toString(sysRedball)+"+"+sysBlueball);
 
         //你的号码和中奖号码比较
@@ -102,6 +104,18 @@ public class test27 {
             int index = r.nextInt(redBalls.length - i);
             comRedball[i] = redBalls[index];
             redBalls[index] = redBalls[redBalls.length - i - 1]+redBalls[index]-(redBalls[redBalls.length - i - 1]=redBalls[index]);
+        }
+    }
+
+    //大大版冒泡排序法
+    private static void sortNumber(int[] comRedball){
+        int len = comRedball.length;
+        for(int i=0;i<len;i++){
+            for(int j=0;j<len-i-1;j++){
+                if(comRedball[j]>comRedball[j+1]){
+                    comRedball[j+1]=comRedball[j]+comRedball[j+1]-(comRedball[j]=comRedball[j+1]);
+                }
+            }
         }
     }
 }
