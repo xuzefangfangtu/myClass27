@@ -5,7 +5,7 @@ public class test25 {
         System.out.println(selection(arr, 79));
     }
 
-    public static int selection(int[] arr,int var) {
+    private static int selection(int[] arr,int var) {
         int start = 0;
         int end = arr.length - 1;
         do{
