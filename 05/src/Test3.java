@@ -12,6 +12,8 @@ abstract class BaseManage{
     public void action(String name,String method){
         if("admin".equals(name)){
             execute(method);
+        }else{
+            System.out.println("没有权限");
         }
     }
     public abstract void execute(String method);
